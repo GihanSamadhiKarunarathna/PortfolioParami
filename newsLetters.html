@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Newsletters</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h1, p {
+            text-align: center;
+        }
+        .pdf-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background: #0056b3;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+        .modal iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">← Back to Home</a>
+    </nav>
+    <h1>My Newsletters</h1>
+    <p>Here are some newsletters I've created:</p>
+
+    <div class="pdf-container">
+        <div class="card">
+            <img src="thumbnail1.jpg" alt="Newsletter 1">
+            <h3>Newsletter 1</h3>
+            <button onclick="openModal('newsLetter 1.pdf')">View</button>
+        </div>
+        <div class="card">
+            <img src="thumbnail2.jpg" alt="Newsletter 2">
+            <h3>Newsletter 2</h3>
+            <button onclick="openModal('newsLetter 2.pdf')">View</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <iframe id="pdfFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openModal(pdf) {
+            document.getElementById('pdfFrame').src = pdf;
+            document.getElementById('pdfModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('pdfModal').style.display = 'none';
+            document.getElementById('pdfFrame').src = "";
+        }
+    </script>
+</body>
+</html>
