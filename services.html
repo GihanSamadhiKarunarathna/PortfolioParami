@@ -1,48 +1,88 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Services</title>
+    <title>My Newsletters</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">← Back to Home</a>
-    </nav>
-    <section class="my-work">
-        <h1>My Services</h1>
-        <p>
-            Hi, I'm <strong>Parami Pabasara Dassanayake</strong>, a passionate <strong>Software Engineering graduate</strong> with a keen 
-            interest in <strong>web development, designing, editing, and marketing</strong>. My work combines creativity and technical expertise 
-            to build engaging digital experiences. Below are some highlights of my work in these fields.
-        </p>
-
-        <div class="work-gallery">
-            <div class="work-item">
-                <img src="images/programmer.jpg" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>Building responsive, modern websites with clean code and user-friendly interfaces.</p>
-            </div>
-
-            <div class="work-item">
-                <img src="images/designing.jpg" alt="Designing">
-                <h3>Designing</h3>
-                <p>Creating visually appealing UI/UX designs that enhance user experience.</p>
-            </div>
-
-            <div class="work-item">
-                <img src="images/editing.jpg" alt="Editing">
-                <h3>Editing</h3>
-                <p>Professional image and video editing to create high-quality visual content.</p>
-            </div>
-
-            <div class="work-item">
-                <img src="images/marketing.jpg" alt="Marketing">
-                <h3>Marketing</h3>
-                <p>Crafting engaging marketing strategies, social media content, and newsletters.</p>
+        <div class="nav-card"> <!-- Added card wrapper -->
+            <div class="nav-container">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="newsLetters.html">My Work</a>
+                    <a href="services.html">Services</a>
+                    <a href="resume.pdf" target="_blank">Resume</a>
+                </div>
+                <button onclick="window.location.href='contact.html'">Contact Me</button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="hamburg" height="32" width="34" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3-32-32-32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
             </div>
         </div>
-    </section>
+    </nav>
+    <main>
+        <section>
+            <div class="newsletter-content">
+                <div class="main-content">
+                    <h1>My <span>Services</span></h1>
+                    <p>
+                        My expertise spans across <strong>web development, designing, editing, and marketing</strong>, blending creativity with technical skills to bring ideas to life. Whether it’s building modern websites, designing intuitive interfaces, enhancing visuals through editing, or driving impactful marketing campaigns, I strive to deliver excellence in every project.
+                    </p>
+
+                    <div class="work-gallery">
+                        <div class="services-card">
+                            <img src="images/programmer.jpg">
+                            <h3>Web Development</h3>
+                            <p>Building responsive, modern websites with clean code and user-friendly interfaces.</p>
+                        </div>
+                    
+                        <div class="services-card">
+                            <img src="images/designing.jpg">
+                            <h3>Designing</h3>
+                            <p>Creating visually appealing UI/UX designs that enhance user experience.</p>
+                        </div>
+                    
+                        <div class="services-card">
+                            <img src="images/editing.jpg">
+                            <h3>Editing</h3>
+                            <p>Professional image and video editing to create high-quality visual content.</p>
+                        </div>
+                    
+                        <div class="services-card">
+                            <img src="images/marketing.jpg">
+                            <h3>Marketing</h3>
+                            <p>Crafting engaging marketing strategies, social media content, and newsletters.</p>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024 Parami Dassanayake. All Rights Reserved.</p>
+                
+                <div class="footer-contact">
+                    <p><strong>Email:</strong> <a href="mailto:paramidassanayake13@gmail.com">paramidassanayake13@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+94721005182">(+94) 721 005 182</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/parami-dassanayake-60110a26b" target="_blank">
+                        <img src="images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://x.com/Parxmi" target="_blank">
+                        <img src="images/twitter.png" alt="Twitter" style="width: 40px; height: 30px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
 </body>
 </html>

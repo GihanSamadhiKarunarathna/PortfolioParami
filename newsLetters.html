@@ -1,114 +1,66 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Newsletters</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        h1, p {
-            text-align: center;
-        }
-        .pdf-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            width: 250px;
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .card button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .card button:hover {
-            background: #0056b3;
-        }
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 80%;
-            height: 80%;
-            position: relative;
-        }
-        .modal iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 20px;
-            cursor: pointer;
-            color: red;
-        }
-    </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">← Back to Home</a>
+        <div class="nav-card"> <!-- Added card wrapper -->
+            <div class="nav-container">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="newsLetters.html">My Work</a>
+                    <a href="services.html">Services</a>
+                    <a href="resume.pdf" target="_blank">Resume</a>
+                </div>
+                <button onclick="window.location.href='contact.html'">Contact Me</button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="hamburg" height="32" width="34" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3-32-32-32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </div>
+        </div>
     </nav>
-    <h1>My Newsletters</h1>
-    <p>Here are some newsletters I've created:</p>
 
-    <div class="pdf-container">
-        <div class="card">
-            <img src="thumbnail1.jpg" alt="Newsletter 1">
-            <h3>Newsletter 1</h3>
-            <button onclick="openModal('newsLetter 1.pdf')">View</button>
+    <section>
+        <div class="newsletter-content">
+            <div class="main-content">
+                <h1>See My <span>Work</span></h1><br>
+                <p>I take great pride in blending creativity and technical skills to produce engaging newsletters. These pieces showcase my ability to design visually appealing layouts while delivering insightful and impactful content. Whether it's crafting compelling messages, designing clean and modern layouts, or optimizing for readability, my newsletters reflect my passion for both design and communication. Each project demonstrates my commitment to delivering high-quality work that resonates with the audience, making complex information accessible and enjoyable.</p>
+<br>
+                <div class="pdf-container">
+                    <div class="card">
+                        <!-- You can use a PDF thumbnail image or icon -->
+                        <img src="images/newsLetter1.jpg" alt="Newsletter 1" class="pdf-thumbnail">
+                        <h5>LAVENRO THE PREMIUM KITCHEN DESIGNERS</h5>
+                        <!-- Link to open the PDF -->
+                        <button class="newsletter-btn" onclick="openModal('newsLetter 1.pdf')">View</button>
+                    </div>
+                    <div class="card">
+                        <img src="images/newsLetter2.jpg" alt="Newsletter 2" class="pdf-thumbnail">
+                        <h5>THE BOUTIQUE SHOP - FLASH SALE</h5>
+                        <button class="newsletter-btn" onclick="openModal('newsLetter 2.pdf')">View</button>
+                    </div>
+                    <div class="card">
+                        <!-- You can use a PDF thumbnail image or icon -->
+                        <img src="images/newsLetter3.jpg" alt="Newsletter 1" class="pdf-thumbnail">
+                        <h5>UNLOCK NEW GROWTH OPPORTUNITIES</h5>
+                        <!-- Link to open the PDF -->
+                        <button class="newsletter-btn" onclick="openModal('newsLetter 3.pdf')">View</button>
+                    </div>
+                    <div class="card">
+                        <img src="images/newsLetter4.jpg" alt="Newsletter 2" class="pdf-thumbnail">
+                        <h5>EXPLORING THE FUTURE OF HOME DESIGN</h5>
+                        <button class="newsletter-btn" onclick="openModal('newsLetter 4.pdf')">View</button>
+                    </div>
+                </div>  <br>  
+            </div>
         </div>
-        <div class="card">
-            <img src="thumbnail2.jpg" alt="Newsletter 2">
-            <h3>Newsletter 2</h3>
-            <button onclick="openModal('newsLetter 2.pdf')">View</button>
-        </div>
-    </div>
+    </section>
 
     <!-- Modal -->
     <div id="pdfModal" class="modal">
@@ -118,7 +70,24 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        AOS.init({offset:1});
+    </script>
+    <script>
+        const hamburg = document.querySelector('.hamburg')
+        const cancel = document.querySelector('.cancel')
+        const navbar = document.querySelector('.dropmenu');
+        
+        hamburg.addEventListener('click', ()=> {
+            navbar.style.transform = "translateY(0px)"
+            hamburg.style.display = 'none'
+        })
+        cancel.addEventListener('click', ()=> {
+            navbar.style.transform = "translateY(-300px)"
+            hamburg.style.display = 'block'
+        })
+        
         function openModal(pdf) {
             document.getElementById('pdfFrame').src = pdf;
             document.getElementById('pdfModal').style.display = 'flex';
@@ -129,4 +98,26 @@
         }
     </script>
 </body>
+<!-- <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2024 Parami Dassanayake. All Rights Reserved.</p>
+            
+            <div class="footer-contact">
+                <p><strong>Email:</strong> <a href="mailto:paramidassanayake13@gmail.com">paramidassanayake13@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+94721005182">(+94) 721 005 182</a></p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/parami-dassanayake-60110a26b" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/Parxmi" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter" style="width: 40px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
 </html>
